@@ -4,12 +4,16 @@ import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.cdi.CDIUI;
+import com.vaadin.jee.skeleton.boundary.SkeletonBoundary;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.ui.ui.Transport;
-import com.vaadin.ui.Label;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.inject.Inject;
 
 @CDIUI("")
 @Push(transport = Transport.LONG_POLLING)
@@ -19,9 +23,16 @@ public class SkeletonUI extends UI {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SkeletonUI.class);
 
+    @Inject
+    SkeletonBoundary boundary;
+
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        setContent(new Label("This is a skeleton UI"));
-        LOGGER.debug("UI {} initialized", this);
+        setContent(new Button("This is a skeleton UI", this::invokeBoundary));
+        LOGGER.info("UI {} initialized", this);
+    }
+
+    private void invokeBoundary(Button.ClickEvent event) {
+        Notification.show(boundary.createAndReturn("Foobar!").toString());
     }
 }

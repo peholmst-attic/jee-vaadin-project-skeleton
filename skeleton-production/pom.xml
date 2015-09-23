@@ -172,6 +172,8 @@
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>skeleton-ui</artifactId>
                                     <excludes>
+                                        <!-- Exclude the h2 database -->
+                                        <exclude>WEB-INF/lib/h2-*.jar</exclude>
                                         <!-- Exclude larger development time widgetset. -->
                                         <!-- The relevant classes are copied to the WAR above. -->
                                         <exclude>WEB-INF/lib/skeleton-widgetset-*.jar</exclude>
@@ -196,11 +198,6 @@
                                 <phase>install</phase>
                             </execution>
                         </executions>
-                    </plugin>
-                    <!-- Use Wildfly to test the deployment -->
-                    <plugin>
-                        <groupId>org.wildfly.plugins</groupId>
-                        <artifactId>wildfly-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
