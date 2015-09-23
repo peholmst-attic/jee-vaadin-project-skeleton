@@ -4,7 +4,7 @@ import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.cdi.CDIUI;
-import com.vaadin.jee.skeleton.boundary.SkeletonBoundary;
+import com.vaadin.jee.skeleton.boundary.SampleBoundary;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Notification;
@@ -23,7 +23,7 @@ public class SkeletonUI extends UI {
     private static final Logger LOGGER = LoggerFactory.getLogger(SkeletonUI.class);
 
     @Inject
-    SkeletonBoundary boundary;
+    SampleBoundary boundary;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {

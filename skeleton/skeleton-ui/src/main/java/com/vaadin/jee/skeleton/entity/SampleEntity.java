@@ -5,7 +5,7 @@ import com.vaadin.jee.skeleton.entity.common.BaseEntity;
 import javax.persistence.Entity;
 
 @Entity
-public class SkeletonEntity extends BaseEntity {
+public class SampleEntity extends BaseEntity {
 
     private String foo;
 
