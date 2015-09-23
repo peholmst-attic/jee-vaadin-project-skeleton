@@ -1,5 +1,5 @@
 target/
 .idea/
 *.iml
-skeleton-widgetset/src/main/resources/VAADIN/widgetsets/
+skeleton/skeleton-widgetset/src/main/resources/VAADIN/widgetsets/
 gwt-unitCache/
