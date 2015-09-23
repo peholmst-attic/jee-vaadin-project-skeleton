@@ -24,15 +24,17 @@ up a multi-module Maven project for a web application with the following feature
 
 3. Create a new project using the archetype (feel free to modify the project parameters):
 
-    `$ mvn archetype:generate -DarchetypeGroupId=com.vaadin \
-                              -DarchetypeArtifactId=vaadin-jee-archetype \
-                              -DarchetypeVersion=1.0-SNAPSHOT \
-                              -DgroupId=my.company \
-                              -DartifactId=myproject \
-                              -Dversion=0.1-SNAPSHOT \
-                              -DthemeName=mytheme \
-                              -DuiName=MyUI \
-                              -DwidgetsetName=MyWidgetset`
+    ```
+    $ mvn archetype:generate -DarchetypeGroupId=com.vaadin \
+                             -DarchetypeArtifactId=vaadin-jee-archetype \
+                             -DarchetypeVersion=1.0-SNAPSHOT \
+                             -DgroupId=my.company \
+                             -DartifactId=myproject \
+                             -Dversion=0.1-SNAPSHOT \
+                             -DthemeName=mytheme \
+                             -DuiName=MyUI \
+                             -DwidgetsetName=MyWidgetset
+    ```
 
 4. CD into your newly created project and perform the priming build: 
 
