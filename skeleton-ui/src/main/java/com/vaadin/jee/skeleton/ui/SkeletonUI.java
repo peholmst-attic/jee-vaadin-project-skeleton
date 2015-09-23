@@ -6,7 +6,6 @@ import com.vaadin.annotations.Widgetset;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.jee.skeleton.boundary.SkeletonBoundary;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.shared.ui.ui.Transport;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
@@ -16,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 
 @CDIUI("")
-@Push(transport = Transport.LONG_POLLING)
+@Push
 @Theme(SkeletonTheme.THEME_NAME)
 @Widgetset("com.vaadin.jee.skeleton.SkeletonWidgetset")
 public class SkeletonUI extends UI {

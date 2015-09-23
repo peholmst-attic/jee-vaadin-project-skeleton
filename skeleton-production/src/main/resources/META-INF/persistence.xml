@@ -5,13 +5,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
-    <!-- Persistence configuration for DEVELOPMENT. If you make any changes to this file, make sure to update
-         the persistence.xml file in the production overlay as well. -->
+    <!-- Persistence configuration for PRODUCTION -->
 
     <persistence-unit name="SkeletonPU" transaction-type="JTA">
         <jta-data-source>java:app/Skeleton/SkeletonDS</jta-data-source>
-        <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-        </properties>
     </persistence-unit>
 </persistence>

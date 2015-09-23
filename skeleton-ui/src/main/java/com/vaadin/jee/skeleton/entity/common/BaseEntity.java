@@ -7,6 +7,9 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 import java.io.Serializable;
 
+/**
+ * Base class for entities.
+ */
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 
@@ -17,26 +20,58 @@ public abstract class BaseEntity implements Serializable {
     @Version
     private Long version;
 
+    /**
+     * Gets the ID of this entity.
+     *
+     * @return the ID or {@code null} if the entity has not been persisted yet.
+     */
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    /**
+     * Sets the ID of this entity. You normally want to let JPA handle this and should not need to set
+     * it explicitly.
+     *
+     * @param id the ID to use.
+     */
+    protected void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Gets the optimistic locking version of this entity.
+     *
+     * @return the version or {@code null} if the entity has not been persisted yet.
+     */
     public Long getVersion() {
         return version;
     }
 
-    public void setVersion(Long version) {
+    /**
+     * Sets the version of this entity. You normally want to let JPA handle this and should not need to set
+     * it explicitly.
+     *
+     * @param version the version to use.
+     */
+    protected void setVersion(Long version) {
         this.version = version;
     }
 
+    /**
+     * Checks if this entity is new (transient) or persistent.
+     *
+     * @return true if this is a new entity, false if it is persistent.
+     */
     public boolean isNew() {
         return id == null;
     }
 
+    /**
+     * Two entities are considered equal if they are of the same class and have the same ID.
+     * <p>
+     * {@inheritDoc}
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
