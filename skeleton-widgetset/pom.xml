@@ -70,7 +70,7 @@
                             <webappDirectory>${basedir}/src/main/resources/VAADIN/widgetsets</webappDirectory>
                             <draftCompile>true</draftCompile>
                             <compileReport>false</compileReport>
-                            <style>DETAILED</style>
+                            <style>OBF</style> <!-- Change to DETAILED if you want human readable JavaScript code -->
                             <strict>true</strict>
                         </configuration>
                         <executions>
@@ -85,6 +85,7 @@
                     <plugin>
                         <artifactId>maven-clean-plugin</artifactId>
                         <configuration>
+                            <!-- Remove generated widgetset files -->
                             <filesets>
                                 <fileset>
                                     <directory>${basedir}/src/main/resources/VAADIN/widgetsets</directory>

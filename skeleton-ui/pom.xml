@@ -62,20 +62,11 @@
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
                 <configuration>
-                    <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
-                    <webappDirectory>${basedir}/target/classes/VAADIN/widgetsets</webappDirectory>
-                    <draftCompile>false</draftCompile>
-                    <compileReport>false</compileReport>
-                    <style>OBF</style>
-                    <strict>true</strict>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>update-theme</goal>
-                            <!-- disabled by default to use on-the-fly theme
-                                compilation -->
-                            <!-- <goal>compile-theme</goal> -->
                         </goals>
                     </execution>
                 </executions>

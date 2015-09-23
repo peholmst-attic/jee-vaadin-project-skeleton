@@ -16,40 +16,24 @@
 
     <properties>
         <vaadin.version>7.5.6</vaadin.version>
+        <vaadin-plugin.version>7.5.6</vaadin-plugin.version>
         <vaadin-cdi.version>1.0.3</vaadin-cdi.version>
-        <java.source.version>1.8</java.source.version>
-        <java.target.version>1.8</java.target.version>
         <javaee.version>7.0</javaee.version>
         <slf4j.version>1.7.12</slf4j.version>
-        <source.encoding>UTF-8</source.encoding>
+        <wildfly-plugin.version>1.0.2.Final</wildfly-plugin.version>
+        <project.build.encoding>UTF-8</project.build.encoding>
+        <project.build.source>1.8</project.build.source>
+        <project.build.target>1.8</project.build.target>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-server</artifactId>
+                <artifactId>vaadin-bom</artifactId>
                 <version>${vaadin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-themes</artifactId>
-                <version>${vaadin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-client</artifactId>
-                <version>${vaadin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-client-compiler</artifactId>
-                <version>${vaadin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-push</artifactId>
-                <version>${vaadin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.vaadin</groupId>
@@ -77,9 +61,9 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.3</version>
                     <configuration>
-                        <source>${java.source.version}</source>
-                        <target>${java.target.version}</target>
-                        <encoding>${source.encoding}</encoding>
+                        <source>${project.build.source}</source>
+                        <target>${project.build.target}</target>
+                        <encoding>${project.build.encoding}</encoding>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -87,13 +71,13 @@
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>2.7</version>
                     <configuration>
-                        <encoding>${source.encoding}</encoding>
+                        <encoding>${project.build.encoding}</encoding>
                     </configuration>
                 </plugin>
                 <plugin>
                     <groupId>com.vaadin</groupId>
                     <artifactId>vaadin-maven-plugin</artifactId>
-                    <version>${vaadin.version}</version>
+                    <version>${vaadin-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -124,7 +108,7 @@
                 <plugin>
                     <groupId>org.wildfly.plugins</groupId>
                     <artifactId>wildfly-maven-plugin</artifactId>
-                    <version>1.0.2.Final</version>
+                    <version>${wildfly-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
