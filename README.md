@@ -8,6 +8,7 @@ up a multi-module Maven project for a web application with the following feature
 - UI built with Vaadin 7.5 and Vaadin CDI 1.0
 - Backend built with CDI and EJB
 - Database access using JPA
+- DeltaSpike repositories and I18N
 - Includes a custom (but empty) theme based on Valo and the necessary Maven configuration to compile it
 - Includes a custom (but empty) widgetset and the necessary Maven configuration to compile it
 - Includes an overlay for building a WAR file optimized for production
