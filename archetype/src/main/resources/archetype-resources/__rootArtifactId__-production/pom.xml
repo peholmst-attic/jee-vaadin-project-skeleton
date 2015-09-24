@@ -28,21 +28,23 @@
             <scope>runtime</scope>
         </dependency>
         <!--
-            Also include the compiled classes as a provided dependency so that the GWT compiler can pick up
-            all the GWT modules.
+            Also include GWT and theme sources for the (re)compilation.
           -->
-        <dependency>
-            <groupId>${symbol_dollar}{project.groupId}</groupId>
-            <artifactId>${rootArtifactId}-ui</artifactId>
-            <version>${symbol_dollar}{project.version}</version>
-            <classifier>classes</classifier>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>${symbol_dollar}{project.groupId}</groupId>
             <artifactId>${rootArtifactId}-widgetset</artifactId>
             <version>${symbol_dollar}{project.version}</version>
             <classifier>sources</classifier>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-themes</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

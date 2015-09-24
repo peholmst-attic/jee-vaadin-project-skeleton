@@ -4,7 +4,7 @@
 ${rootArtifactId} Readme
 ===
 
-This is a project stub for a Vaadin and JEE 7 Web Profile application.
+This is a project stub for a Vaadin and Java EE 7 Web Profile application.
 
 ${symbol_pound}${symbol_pound} Compiling the widgetset
 
