@@ -85,7 +85,6 @@
                     <version>2.6</version>
                     <configuration>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
-                        <attachClasses>true</attachClasses>
                         <packagingExcludes>WEB-INF/classes/VAADIN/gwt-unitCache/**,
                             WEB-INF/classes/VAADIN/widgetsets/WEB-INF/**</packagingExcludes>
                     </configuration>
