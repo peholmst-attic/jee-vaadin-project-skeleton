@@ -40,6 +40,17 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- DeltaSpike Core -->
+        <dependency>
+            <groupId>org.apache.deltaspike.core</groupId>
+            <artifactId>deltaspike-core-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.deltaspike.core</groupId>
+            <artifactId>deltaspike-core-impl</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- DeltaSpike for JPA repositories -->
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>

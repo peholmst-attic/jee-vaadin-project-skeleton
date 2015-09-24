@@ -25,9 +25,12 @@ public class SkeletonUI extends UI {
     @Inject
     SampleBoundary boundary;
 
+    @Inject
+    SkeletonUIMessages messages;
+
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        setContent(new Button("This is a skeleton UI", this::invokeBoundary));
+        setContent(new Button(messages.uiContentButtonLabel(), this::invokeBoundary));
         LOGGER.info("UI {} initialized", this);
     }
 
