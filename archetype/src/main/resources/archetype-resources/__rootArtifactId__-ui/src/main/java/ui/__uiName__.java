@@ -26,11 +26,14 @@ public class ${uiName} extends UI {
     private static final Logger LOGGER = LoggerFactory.getLogger(${uiName}.class);
 
     @Inject
+    ${uiName}Messages messages;
+
+    @Inject
     SampleBoundary boundary;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        setContent(new Button("This is a skeleton UI", this::invokeBoundary));
+        setContent(new Button(messages.uiContentButtonLabel(), this::invokeBoundary));
         LOGGER.info("UI {} initialized", this);
     }
 
