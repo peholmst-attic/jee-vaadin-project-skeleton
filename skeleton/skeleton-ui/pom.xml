@@ -40,6 +40,17 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- DeltaSpike for JPA repositories -->
+        <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-data-module-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-data-module-impl</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- Wildfly includes SLF4J. If you are not going to deploy to Wildfly, you have to add additional dependencies
              or use another logging API. -->
         <dependency>
