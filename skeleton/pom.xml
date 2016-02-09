@@ -15,13 +15,13 @@
     </modules>
 
     <properties>
-        <vaadin.version>7.5.6</vaadin.version>
-        <vaadin-plugin.version>7.5.6</vaadin-plugin.version>
+        <vaadin.version>7.6.2</vaadin.version>
+        <vaadin-plugin.version>7.6.2</vaadin-plugin.version>
         <vaadin-cdi.version>1.0.3</vaadin-cdi.version>
         <javaee.version>7.0</javaee.version>
         <slf4j.version>1.7.12</slf4j.version>
-        <wildfly-plugin.version>1.0.2.Final</wildfly-plugin.version>
-        <deltaspike.version>1.5.0</deltaspike.version>
+        <wildfly-plugin.version>1.1.0.Alpha5</wildfly-plugin.version>
+        <deltaspike.version>1.5.3</deltaspike.version>
         <project.build.encoding>UTF-8</project.build.encoding>
         <project.build.source>1.8</project.build.source>
         <project.build.target>1.8</project.build.target>
