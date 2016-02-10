@@ -15,7 +15,6 @@
         <javaee.version>7.0</javaee.version>
         <slf4j.version>1.7.12</slf4j.version>
         <wildfly-plugin.version>1.1.0.Alpha5</wildfly-plugin.version>
-        <deltaspike.version>1.5.3</deltaspike.version>
         <project.build.encoding>UTF-8</project.build.encoding>
         <project.build.source>1.8</project.build.source>
         <project.build.target>1.8</project.build.target>
@@ -44,26 +43,6 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${symbol_dollar}{slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.deltaspike.core</groupId>
-                <artifactId>deltaspike-core-api</artifactId>
-                <version>${symbol_dollar}{deltaspike.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.deltaspike.core</groupId>
-                <artifactId>deltaspike-core-impl</artifactId>
-                <version>${symbol_dollar}{deltaspike.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-data-module-api</artifactId>
-                <version>${symbol_dollar}{deltaspike.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-data-module-impl</artifactId>
-                <version>${symbol_dollar}{deltaspike.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

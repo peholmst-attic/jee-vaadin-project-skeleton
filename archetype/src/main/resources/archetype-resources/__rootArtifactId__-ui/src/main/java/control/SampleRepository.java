@@ -3,11 +3,11 @@
 #set( $symbol_escape = '\' )
 package ${package}.control;
 
+import javax.transaction.Transactional;
+
+import ${package}.control.common.BaseRepository;
 import ${package}.entity.SampleEntity;
 
-import org.apache.deltaspike.data.api.EntityRepository;
-import org.apache.deltaspike.data.api.Repository;
-
-@Repository(forEntity = SampleEntity.class)
-public interface SampleRepository extends EntityRepository<SampleEntity, Long> {
+@Transactional(Transactional.TxType.MANDATORY)
+public class SampleRepository extends BaseRepository<SampleEntity> {
 }
